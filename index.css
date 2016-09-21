@@ -32,7 +32,8 @@ body{
     border-bottom-style: solid;
     border-bottom-color: black;
     border-bottom-width: 1px;
-    font-size: 2em;
+    font-size: 1.5em;
+    margin-bottom: 0px;
 }
 
 .btn-primary{
@@ -41,4 +42,17 @@ body{
 
 button{
    margin: 3px !important;
+    text-align:center !important;
+    padding-left: 4px !important;
+    border-radius: 5px !important;
+    font-size: 0.9em !important;
+}
+
+.navbar {
+	margin-bottom: 0px;
+}
+
+#logo{
+    height:5vmin;
+    width: 5vmin;
 }
