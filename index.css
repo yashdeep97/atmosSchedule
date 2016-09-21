@@ -1,0 +1,44 @@
+body{
+    font-family: sans-serif,Helvetica;
+    background: black;
+    width: 100%;
+    height:100%;
+    overflow: hidden;
+}
+
+.atmos-full-height{
+	height: 100vh;
+}
+
+#sidebar{
+   background-color: orange ;
+}
+
+#timeline{
+    background-color: beige;
+}
+
+#content{
+    background-color: chartreuse;
+}
+
+#filters ul{
+    list-style-type: none;
+}
+
+#filters label{
+    color: black;
+    margin-left: 30%;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-bottom-width: 1px;
+    font-size: 2em;
+}
+
+.btn-primary{
+    background-color: crimson !important;
+}
+
+button{
+   margin: 3px !important;
+}
