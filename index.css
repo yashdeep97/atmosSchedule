@@ -56,3 +56,29 @@ button{
     height:5vmin;
     width: 5vmin;
 }
+ul{
+    list-style-type: none;
+}
+#timeline li{
+    margin-top: 10vh;
+}
+li div{
+    left: 30% !important;
+    background-color: chocolate;
+    height: 100px;
+    width: 100px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 50% !important;
+    border-width: 2px !important;
+}
+
+#verticalLine{
+    width: 10px;
+    height: 100vh;
+    position: fixed;
+    left:30%;
+    background-color: black;
+    
+}
