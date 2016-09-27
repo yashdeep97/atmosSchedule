@@ -4,12 +4,11 @@ body{
     width: 100%;
     height:100%;
     overflow: hidden;
-    z-index: -3;
-    overflow-y: scroll;
 }
 
 .atmos-full-height{
-	height: 100vh;
+	height: 100vh !important;
+    
 }
 
 #sidebar{
@@ -18,7 +17,7 @@ body{
 
 #timeline{
     background-color: beige;
-    z-index: -2;
+    overflow-y: scroll;
 }
 
 #content{
@@ -62,7 +61,8 @@ button{
 #timeline ul{
     list-style-type: none;
     position: absolute;
-    left:27%;
+    left:8%;
+    z-index: 1;
 }
 #timeline li{
     margin-top: 5vh;
@@ -81,9 +81,9 @@ li div{
 
 #verticalLine{
     width: 10px;
-    height: 100vh;
+    height: 280%;
     position: absolute;
-    left:50%;
-    background-color: black;
-    z-index: -1;
+    left:15%;
+    background-color: black; 
+    
 }
