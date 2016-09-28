@@ -15,9 +15,9 @@ body{
    background-color: orange ;
 }
 
-#timeline{
-    background-color: beige;
+.atmos-content{
     overflow-y: scroll;
+    background-color: beige;
 }
 
 #content{
