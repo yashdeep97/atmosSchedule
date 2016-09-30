@@ -11,7 +11,9 @@ body {
   font-size: 100%;
   font-family: "Droid Serif", serif;
   color: #7f8c97;
-  background-color: #e9f0f5; }
+  background-color: #e9f0f5;
+    overflow-y: hidden;
+}
 
 a {
   color: #acb7c0;
@@ -98,11 +100,6 @@ header {
   box-shadow: 0 3px 0 #d7e4ed; }
   .cd-timeline-content h2 {
     color: #303e49; }
-  .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
-    display: inline-block; }
-  .cd-timeline-content p {
-    margin: 1em 0;
-    line-height: 1.6; }
   .cd-timeline-content .cd-read-more {
     float: right;
     padding: .8em 1em;
@@ -110,10 +107,7 @@ header {
     color: #ffffff; }
     .no-touch .cd-timeline-content .cd-read-more:hover {
       background-color: #bac4cb; }
-  .cd-timeline-content .cd-date {
-    float: left;
-    padding: .8em 0;
-    opacity: .7; }
+
   .cd-timeline-content::before {
     content: '';
     position: absolute;
@@ -123,7 +117,8 @@ header {
     width: 0;
     border: 7px solid transparent;
     border-right: 7px solid #ffffff; }
-  .cd-timeline-content::before {
+
+.cd-timeline-content::before {
     top: 24px;
     left: 100%;
     border-color: transparent;
@@ -135,14 +130,9 @@ header {
     width: 100%;
     left: 122%;
     top: 6px; }
-  .cd-timeline-block:nth-child(even) .cd-timeline-content {
-    float: right; }
-    .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
-      top: 24px;
-      left: auto;
-      right: 100%;
-      border-color: transparent;
-      border-right-color: #ffffff; }
+
+
+   
     .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
       float: right; }
     .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
@@ -154,10 +144,13 @@ header {
   .cssanimations .cd-timeline-content.bounce-in {
     visibility: visible; }
 
-/*# sourceMappingURL=index2.css.map */
 .cd-timeline-block p{
  vertical-align: middle;
     text-align: center;
     margin-top: 25%;
     color: black;
+}
+
+#timeline{
+    overflow-y: scroll;
 }
