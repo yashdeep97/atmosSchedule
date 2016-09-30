@@ -102,7 +102,9 @@ Main components
   padding: 1em;
   box-shadow: 0 3px 0 #d7e4ed;
   overflow-y: auto;
-}
+  overflow-x: visible;
+  }
+
 
 .cd-timeline-content h4 {
     color: #303e49; 
@@ -129,7 +131,21 @@ Main components
 
 
 /* for triangle */
- .cd-timeline-content::before {
+/* .cd-timeline-content::before {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-bottom: 7px solid transparent;
+    border-right: 7px solid #000;
+    top: 16px;
+    right: 100%;
+}
+*/
+
+
+
+.cd-timeline-content::before {
     content: '';
     position: absolute;
     top: 16px;
@@ -137,18 +153,19 @@ Main components
     height: 0;
     width: 0;
     border: 7px solid transparent;
-    border-right: 7px solid #ffffff; }
-
+    border-right: 7px solid #ffffff;
+}
 .cd-timeline-content::before {
     top: 24px;
-    left: -1.5%;
-    transform: scale(2);
-    transform: rotate(180deg);
+    left: auto;
+    right: 100%;
     border-color: transparent;
-    border-left-color: #ffffff; 
-    margin-top: -1.5%
+    border-right-color: #000;
+    box-sizing: border-box;
 }
-  
+
+
+
 
 /*timeslot text */
 .cd-timeline-block .cd-timeline-timeslot p{
@@ -179,7 +196,7 @@ button{
 }
 
 #timeline{
-    background: url(images/background.jpg);
+    #background: url(images/background.jpg);
 }
 
 .my-table{
