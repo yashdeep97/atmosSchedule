@@ -36,8 +36,9 @@ Modules - reusable parts of our design
   /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
   width: 90%;
   max-width: 1170px;
-  margin: 0 auto; }
-  .cd-container::after {
+  margin: 0 auto;
+}
+.cd-container::after {
     /* clearfix */
     content: '';
     display: table;
@@ -48,67 +49,86 @@ Modules - reusable parts of our design
 Main components 
 
 -------------------------------- */
-header {
-  height: 200px;
-  line-height: 200px;
-  text-align: center;
-  background: #303e49; }
+
 
 #cd-timeline {
   position: relative;
   padding: 2em 0;
   margin-top: 2em;
-  margin-bottom: 2em; }
-  #cd-timeline::before {
-    /* this is the vertical line */
+  margin-bottom: 2em; 
+}
+
+
+/* for vertical line */
+#cd-timeline::before {
     content: '';
     position: absolute;
     top: 0;
     left: 18px;
     height: 100%;
     width: 4px;
-    background: #d7e4ed; }
+    background-color: darkcyan; }
+
+
 
 .cd-timeline-block {
   position: relative;
-  margin: 2em 0; }
-  .cd-timeline-block:last-child {
-    margin-bottom: 0; }
+  margin: 50px 0px 50px 0px;
+}
 
-.cd-timeline-img {
+ .cd-timeline-block:last-child {
+    margin-bottom: 100px; 
+}
+
+
+
+/* for timeslot circles */
+.cd-timeline-timeslot {
   position: absolute;
   top: 0;
-  Zleft: 0;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   box-shadow: 0 0 0 4px #ffffff, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
-  /* Force Hardware Acceleration in WebKit */ }
+  background: #75ce66;      
+  transform: scale(1.5);
+}
 
-  .cd-timeline-img.cd-picture {
-    background: #75ce66; }
-  .cd-timeline-img.cd-movie {
-    background: #c03b44; }
-  .cd-timeline-img.cd-location {
-    background: #f0ca45; }
 
-.cd-timeline-content {
+.cd-timeline-content{
   position: relative;
-  margin-left: 60px;
+  margin-left: 70px;
   background: #ffffff;
   padding: 1em;
-  box-shadow: 0 3px 0 #d7e4ed; }
-  .cd-timeline-content h2 {
-    color: #303e49; }
-  .cd-timeline-content .cd-read-more {
-    float: right;
-    padding: .8em 1em;
-    background: #acb7c0;
-    color: #ffffff; }
-    .no-touch .cd-timeline-content .cd-read-more:hover {
-      background-color: #bac4cb; }
+  box-shadow: 0 3px 0 #d7e4ed;
+}
 
-  .cd-timeline-content::before {
+.cd-timeline-content h4 {
+    color: #303e49; 
+    text-align: center;
+}
+
+
+
+/* for Read more */
+.cd-timeline-content .cd-read-more {
+    float: right;
+    padding: 10px;
+    background-color: coral;
+    color: white; }
+
+.cd-timeline-content .cd-read-more:hover {
+    background-color: gold;
+    text-decoration: none;
+}
+.cd-timeline-content .cd-read-more {
+    float: left;
+}
+
+
+
+/* for triangle */
+ .cd-timeline-content::before {
     content: '';
     position: absolute;
     top: 16px;
@@ -120,37 +140,36 @@ header {
 
 .cd-timeline-content::before {
     top: 24px;
-    left: 100%;
+    left: -1.5%;
+    transform: scale(2);
+    transform: rotate(180deg);
     border-color: transparent;
-    border-left-color: #ffffff; }
-  .cd-timeline-content .cd-read-more {
-    float: left; }
-  .cd-timeline-content .cd-date {
-    position: absolute;
-    width: 100%;
-    left: 122%;
-    top: 6px; }
+    border-left-color: #ffffff; 
+    margin-top: -1.5%
+}
+  
 
-
-   
-    .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
-      float: right; }
-    .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
-      left: auto;
-      right: 122%;
-      text-align: right; }
-  .cssanimations .cd-timeline-content.is-hidden {
-    visibility: hidden; }
-  .cssanimations .cd-timeline-content.bounce-in {
-    visibility: visible; }
-
-.cd-timeline-block p{
+/*timeslot text */
+.cd-timeline-block .cd-timeline-timeslot p{
  vertical-align: middle;
     text-align: center;
     margin-top: 25%;
     color: black;
 }
 
+
 #timeline{
     overflow-y: scroll;
+}
+
+.cd-timeline-content p{
+    font-size: 1.5em;
+}
+
+#filters label{
+    font-size: 2em;
+}
+
+button{
+    font-size: 1.2em !important;
 }
