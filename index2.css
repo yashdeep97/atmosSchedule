@@ -12,7 +12,7 @@ body {
   font-family: "Droid Serif", serif;
   color: #7f8c97;
   background-color: #e9f0f5;
-    overflow-y: hidden;
+    overflow: hidden !important;
 }
 
 a {
@@ -101,6 +101,7 @@ Main components
   background: #ffffff;
   padding: 1em;
   box-shadow: 0 3px 0 #d7e4ed;
+  overflow-y: auto;
 }
 
 .cd-timeline-content h4 {
@@ -112,7 +113,6 @@ Main components
 
 /* for Read more */
 .cd-timeline-content .cd-read-more {
-    float: right;
     padding: 10px;
     background-color: coral;
     color: white; }
@@ -123,6 +123,7 @@ Main components
 }
 .cd-timeline-content .cd-read-more {
     float: left;
+    margin-top: 10px;
 }
 
 
@@ -162,7 +163,7 @@ Main components
     overflow-y: scroll;
 }
 
-.cd-timeline-content p{
+.cd-timeline-content div{
     font-size: 1.5em;
 }
 
@@ -172,4 +173,16 @@ Main components
 
 button{
     font-size: 1.2em !important;
+}
+.nav li a{
+    font-size: 1.2em;
+}
+
+#timeline{
+    background: url(images/background.jpg);
+}
+
+.my-table{
+    display: table;
+    width: 100%;
 }
