@@ -92,58 +92,19 @@ Main components
   box-shadow: 0 0 0 4px #ffffff, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
   background: #75ce66;      
   transform: scale(1.5);
-  margin-top: 4%;
+  margin-top: 2%;
 }
 
 
 .cd-timeline-content{
   position: relative;
   margin-left: 70px;
-  background: #ffffff;
+  background-color: rgba(255,255,255,0.5);
   padding: 1em;
   box-shadow: 0 3px 0 #d7e4ed;
   overflow-y: auto;
   overflow-x: visible;
   }
-
-
-.cd-timeline-content h4 {
-    color: #303e49; 
-    text-align: center;
-}
-
-
-
-/* for Read more */
-.cd-timeline-content .cd-read-more {
-    padding: 10px;
-    background-color: coral;
-    color: white; }
-
-.cd-timeline-content .cd-read-more:hover {
-    background-color: gold;
-    text-decoration: none;
-}
-.cd-timeline-content .cd-read-more {
-    float: left;
-    margin-top: 10px;
-}
-
-
-
-/* for triangle */
-/* .cd-timeline-content::before {
-    content: '';
-    position: absolute;
-    height: 0;
-    width: 0;
-    border-bottom: 7px solid transparent;
-    border-right: 7px solid #000;
-    top: 16px;
-    right: 100%;
-}
-*/
-
 
 
 .cd-timeline-content::before {
@@ -209,10 +170,9 @@ button{
     display: none;
 }
 
-/*.events{
-    display: inline;
-    width: 200px !important;
+.eventsarray{
+    padding: 10px;
+    background-color: beige;
+    margin: 5px;
+    border-radius: 10px;
 }
-.my-table{
-    overflow-x: scroll;
-}*/

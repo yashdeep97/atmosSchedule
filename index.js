@@ -52,7 +52,7 @@ function showEvents(time,str){
         return false;
     }
     for(i=0;i<evt.length;i++){
-        html += "<div class='col-sm-3 eventsarray " + evt[i].cat + "'>" + evt[i].name + "</div>";
+        html += "<div class='eventsarray " + evt[i].cat + "'>" + evt[i].name + "</div>";
     }
     html+= "</div></div>";
     return html;
@@ -66,25 +66,25 @@ function updateEvents(){
     evt = showEvents("1000","10 AM")
     evt = evt ? evt : ""
     html += evt;
-    evt = showEvents("0900","9 AM");
+    evt = showEvents("1100","11 AM");
     evt = evt ? evt : ""
     html += evt;
-    evt = showEvents("0900","9 AM");
+    evt = showEvents("1200","Noon");
     evt = evt ? evt : ""
     html += evt;
-    evt = showEvents("0900","9 AM");
+    evt = showEvents("1300","1 PM");
     evt = evt ? evt : ""
     html += evt;
-    evt = showEvents("0900","9 AM");
+    evt = showEvents("1400","2 PM");
     evt = evt ? evt : ""
     html += evt;
-    evt = showEvents("0900","9 AM");
+    evt = showEvents("1500","9 AM");
     evt = evt ? evt : ""
     html += evt;
-    evt = showEvents("0900","9 AM");
+    evt = showEvents("1600","9 AM");
     evt = evt ? evt : ""
     html += evt;
-    evt = showEvents("0900","9 AM");
+    evt = showEvents("1700","9 AM");
     evt = evt ? evt : ""
     html += evt;
     html += "</div>";
@@ -122,7 +122,8 @@ function loadTestingEvents(day){
 function loadmystuff(){
     var day = document.getElementsByTagName('body')[0].getAttribute('data-day');
     loadTestingEvents(day);
-    updateEvents();
+    //updateEvents();
+    testCode();
 }
 
 //-----------------------------------
@@ -140,6 +141,30 @@ function toggleFilterButton(button){
     }
     updateEvents();
 }
+
+function testCode(){
+    var html = "<div class='cd-timeline-block'>";
+    html += "<div class='cd-timeline-block'><div class='cd-timeline-timeslot'><p>9 AM</p></div><div class='cd-timeline-content'>";
+    html += "<div class='eventsarray'>My event name</div>";
+    html += "<div class='eventsarray'>My event name</div>";
+    html += "<div class='eventsarray'>My event name</div>";
+    html += "</div>"
+    html += "<div class='cd-timeline-block'><div class='cd-timeline-timeslot'><p>9 AM</p></div><div class='cd-timeline-content'>";
+    html += "<div class='eventsarray'>My event name</div>";
+    html += "<div class='eventsarray'>My event name</div>";
+    html += "<div class='eventsarray'>My event name</div>";
+    html += "</div>"
+    html += "<div class='cd-timeline-block'><div class='cd-timeline-timeslot'><p>9 AM</p></div><div class='cd-timeline-content'>";
+    html += "<div class='eventsarray'>My event name</div>";
+    html += "<div class='eventsarray'>My event name</div>";
+    html += "<div class='eventsarray'>My event name</div>";
+    html += "</div>"
+    html += "</div>";
+    html += "</div>";
+    var holder = document.getElementById('cd-timeline');
+    holder.innerHTML = html;
+}   
+
 
 //TODO fetchEvents on page load from some remote server.
 //TODO put all the event and category handlers in new object.
