@@ -92,6 +92,7 @@ Main components
   box-shadow: 0 0 0 4px #ffffff, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
   background: #75ce66;      
   transform: scale(1.5);
+  margin-top: 4%;
 }
 
 
@@ -196,10 +197,22 @@ button{
 }
 
 #timeline{
-    #background: url(images/background.jpg);
+    background: url(images/background.jpg);
 }
 
 .my-table{
     display: table;
     width: 100%;
 }
+
+.hidden{
+    display: none;
+}
+
+/*.events{
+    display: inline;
+    width: 200px !important;
+}
+.my-table{
+    overflow-x: scroll;
+}*/
