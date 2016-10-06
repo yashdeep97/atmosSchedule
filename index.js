@@ -95,12 +95,33 @@ function updateEvents(){
 //-----------------------------------
 //Function called on page load.
 
+function loadTestingEvents(day){
+    if(day == '1'){
+        add("law day","0900","coding");
+        add("reverse coding","1100","coding");
+        add("pybits","0900","cat3");
+        add("botshot","0900","cat2");
+        add("taronish",Date.now(),"cat2");
+    }
+    if(day == '2'){
+        add("law follower","0900","coding");
+        add("reverse coding","0900","coding");
+        add("pybits","0900","cat3");
+        add("botshot","0900","cat2");
+        add("taronish",Date.now(),"cat2");
+    }
+    if(day == '3'){
+        add("law follower","0900","coding");
+        add("reverse coding","1100","coding");
+        add("pybits","0900","coding");
+        add("botshot","0900","cat2");
+        add("taronish",Date.now(),"cat2");
+    }
+}
+
 function loadmystuff(){
-    add("law follower","0900","coding");
-    add("reverse coding","1100","coding");
-    add("pybits","0900","cat3");
-    add("botshot","0900","cat2");
-    add("taronish",Date.now(),"cat2");
+    var day = document.getElementsByTagName('body')[0].getAttribute('data-day');
+    loadTestingEvents(day);
     updateEvents();
 }
 

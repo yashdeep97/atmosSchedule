@@ -9,10 +9,11 @@
         <link rel="stylesheet" type="text/css" href="index2.css">
 		<script type="text/javascript" src="lib/jquery.min.js"></script>
 		<script type="text/javascript" src="lib/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script type="text/javascript" src="index.js"></script>
 		<meta charset="utf-8">
 	</head>
-	<body>
+	<body onload="loadmystuff()" data-day="3">
 		<div class="bs-docs-section clearfix">
 			<div class="row">
 				<div class="col-md-12">
@@ -29,15 +30,15 @@
 								</div>
 								<div class="navbar-collapse collapse navbar-inverse-collapse">
 									<ul class="nav navbar-nav">
-										<li><a href="index.html">DAY 1</a></li>
+										<li class="active"><a href="index.html">DAY 1</a></li>
 										<li><a href="day2.html">Day 2</a></li>
-										<li class="active"><a href="day3.html">Day 3</a></li>
+										<li><a href="day3.html">Day 3</a></li>
 									</ul>
-									<form class="navbar-form navbar-left">
+                                  <!--  <form class="navbar-form navbar-left">
 										<div class="form-group is-empty">
-											<input class="form-control col-md-8" placeholder="Search for an event" type="text">
-										</div>
-									</form>
+											<input class="form-control col-md-8" placeholder="Search for an event" type="text" onkeyup="search()" id= "search">
+										</div> 
+									</form>  --> 
 								</div>
 							</div>
 						</div>
@@ -52,289 +53,35 @@
 					<label>Filters</label>
 					<ul class='checkbox col-md-12 '>
 						<li class="row">
-							<button class="col-sm-12 btn btn-raised btn-default " onclick="toggleFilterButton(this)">Coding Competitions</button>
+							<button data-categoryname="coding" class="col-sm-12 btn btn-raised btn-primary " onclick="toggleFilterButton(this);">Coding Competitions</button>
 						</li>
 						<li class="row">
-							<button class="col-sm-12 btn btn-raised btn-default" onclick="toggleFilterButton(this)">Robotics Competitions</button>
+							<button data-categoryname="coding" class="col-sm-12 btn btn-raised btn-primary" onclick="toggleFilterButton(this);">Robotics Competitions</button>
 						</li>
 						<li class="row">
-							<button class="col-sm-12 btn btn-raised btn-default" onclick="toggleFilterButton(this)">Mean Machines</button>
+							<button data-categoryname="coding" class="col-sm-12 btn btn-raised btn-primary" onclick="toggleFilterButton(this);">Mean Machines</button>
 						</li>
 						<li class="row">
-							<button class="col-sm-12 btn btn-raised btn-default" onclick="toggleFilterButton(this)">Deep Sciences</button>
+							<button data-categoryname="coding" class="col-sm-12 btn btn-raised btn-primary" onclick="toggleFilterButton(this);">Deep Sciences</button>
 						</li>
 						<li class="row">
-							<button class="col-sm-12 btn btn-raised btn-default" onclick="toggleFilterButton(this)">Finance & Management</button>
+							<button data-categoryname="coding" class="col-sm-12 btn btn-raised btn-primary" onclick="toggleFilterButton(this);">Finance & Management</button>
 						</li>
                         <li class="row">
-							<button class="col-sm-12 btn btn-raised btn-default" onclick="toggleFilterButton(this)">Quizzes</button>
+							<button data-categoryname="coding" class="col-sm-12 btn btn-raised btn-primary" onclick="toggleFilterButton(this);">Quizzes</button>
 						</li>
                         <li class="row">
-							<button class="col-sm-12 btn btn-raised btn-default" onclick="toggleFilterButton(this)">Exhibition</button>
+							<button data-categoryname="coding" class="col-sm-12 btn btn-raised btn-primary" onclick="toggleFilterButton(this);">Exhibition</button>
 						</li>
                         <li class="row">
-							<button class="col-sm-12 btn btn-raised btn-default" onclick="toggleFilterButton(this)">Do it yourself</button>
+							<button data-categoryname="coding" class="col-sm-12 btn btn-raised btn-primary" onclick="toggleFilterButton(this);">Do it yourself</button>
 						</li>
 					</ul>
 				</div>
 			</div>
             
 <div id="timeline" class="col-sm-9 col-md-10 atmos-full-height">
-	<section id="cd-timeline" class="cd-container">
-		<div class="cd-timeline-block">
-			<div class="cd-timeline-timeslot">
-				<p>9am</p>
-			</div> <!-- cd-timeline-timeslot -->
-
-			<div class="cd-timeline-content">
-				<h4>Title of section 1</h4>
-				<div class="my-table">
-                    <div class="col-sm-3 events">
-                    event1
-                    </div>
-                    <div class="col-sm-3 events">
-                    event2
-                    </div>
-                    <div class="col-sm-3 events">
-                    event3
-                    </div>
-                    <div class="col-sm-3 events">
-                    event4
-                    </div>
-                </div>
-				<a href="#0" class="cd-read-more">Read more</a>
-			</div> <!-- cd-timeline-content -->
-		</div> <!-- cd-timeline-block -->
-            
-		<div class="cd-timeline-block">
-			<div class="cd-timeline-timeslot ">
-				<p>10am</p>
-			</div> <!-- cd-timeline-timeslot -->
-
-			<div class="cd-timeline-content">
-				<h4>Title of section 2</h4>
-				<div class="my-table">
-                    <div class="col-sm-3 events">
-                    event1
-                    </div>
-                    <div class="col-sm-3 events">
-                    event2
-                    </div>
-                    <div class="col-sm-3 events">
-                    event3
-                    </div>
-                    <div class="col-sm-3 events">
-                    event4
-                    </div>
-                </div>
-				<a href="#0" class="cd-read-more">Read more</a>
-			</div> <!-- cd-timeline-content -->
-		</div> <!-- cd-timeline-block -->
-
-		<div class="cd-timeline-block">
-			<div class="cd-timeline-timeslot ">
-				<p>11am</p>
-			</div> <!-- cd-timeline-timeslot -->
-
-			<div class="cd-timeline-content">
-				<h4>Title of section 3</h4>
-				<div class="my-table">
-                    <div class="col-sm-3 events">
-                    event1
-                    </div>
-                    <div class="col-sm-3 events">
-                    event2
-                    </div>
-                    <div class="col-sm-3 events">
-                    event3
-                    </div>
-                    <div class="col-sm-3 events">
-                    event4
-                    </div>
-                </div>
-				<a href="#0" class="cd-read-more">Read more</a>
-			</div> <!-- cd-timeline-content -->
-		</div> <!-- cd-timeline-block -->
-        
-		<div class="cd-timeline-block">
-			<div class="cd-timeline-timeslot ">
-				<p>Noon</p>
-			</div> <!-- cd-timeline-timeslot -->
-
-			<div class="cd-timeline-content">
-				<h4>Title of section 4</h4>
-				<div class="my-table">
-                    <div class="col-sm-3 events">
-                    event1
-                    </div>
-                    <div class="col-sm-3 events">
-                    event2
-                    </div>
-                    <div class="col-sm-3 events">
-                    event3
-                    </div>
-                    <div class="col-sm-3 events">
-                    event4
-                    </div>
-                </div>
-				<a href="#0" class="cd-read-more">Read more</a>
-			</div> <!-- cd-timeline-content -->
-		</div> <!-- cd-timeline-block -->
-
-        <div class="cd-timeline-block">
-			<div class="cd-timeline-timeslot ">
-				<p>1pm</p>
-			</div> <!-- cd-timeline-timeslot -->
-
-			<div class="cd-timeline-content">
-				<h4>Title of section 5</h4>
-				<div class="my-table">
-                    <div class="col-sm-3 events">
-                    event1
-                    </div>
-                    <div class="col-sm-3 events">
-                    event2
-                    </div>
-                    <div class="col-sm-3 events">
-                    event3
-                    </div>
-                    <div class="col-sm-3 events">
-                    event4
-                    </div>
-                </div>
-				<a href="#0" class="cd-read-more">Read more</a>
-			</div> <!-- cd-timeline-content -->
-		</div> <!-- cd-timeline-block -->
-
-    	<div class="cd-timeline-block">
-			<div class="cd-timeline-timeslot  ">
-				<p>2pm</p>
-			</div> <!-- cd-timeline-timeslot -->
-
-			<div class="cd-timeline-content">
-				<h4>Title of section 6</h4>
-				<div class="my-table">
-                    <div class="col-sm-3 events">
-                    event1
-                    </div>
-                    <div class="col-sm-3 events">
-                    event2
-                    </div>
-                    <div class="col-sm-3 events">
-                    event3
-                    </div>
-                    <div class="col-sm-3 events">
-                    event4
-                    </div>
-                </div>
-				<a href="#0" class="cd-read-more">Read more</a>
-			</div> <!-- cd-timeline-content -->
-		</div> <!-- cd-timeline-block -->
-
-        <div class="cd-timeline-block">
-			<div class="cd-timeline-timeslot  ">
-				<p>3pm</p>
-			</div> <!-- cd-timeline-timeslot -->
-
-			<div class="cd-timeline-content">
-				<h4>Title of section 7</h4>
-				<div class="my-table">
-                    <div class="col-sm-3 events">
-                    event1
-                    </div>
-                    <div class="col-sm-3 events">
-                    event2
-                    </div>
-                    <div class="col-sm-3 events">
-                    event3
-                    </div>
-                    <div class="col-sm-3 events">
-                    event4
-                    </div>
-                </div>
-				<a href="#0" class="cd-read-more">Read more</a>
-			</div> <!-- cd-timeline-content -->
-		</div> <!-- cd-timeline-block -->
-        
-        
-        <div class="cd-timeline-block">
-			<div class="cd-timeline-timeslot  ">
-				<p>4pm</p>
-			</div> <!-- cd-timeline-timeslot -->
-
-			<div class="cd-timeline-content">
-				<h4>Title of section 8</h4>
-				<div class="my-table">
-                    <div class="col-sm-3 events">
-                    event1
-                    </div>
-                    <div class="col-sm-3 events">
-                    event2
-                    </div>
-                    <div class="col-sm-3 events">
-                    event3
-                    </div>
-                    <div class="col-sm-3 events">
-                    event4
-                    </div>
-                </div>
-				<a href="#0" class="cd-read-more">Read more</a>
-			</div> <!-- cd-timeline-content -->
-		</div> <!-- cd-timeline-block -->
-        
-        
-        <div class="cd-timeline-block">
-			<div class="cd-timeline-timeslot  ">
-				<p>5pm</p>
-			</div> <!-- cd-timeline-timeslot -->
-
-			<div class="cd-timeline-content">
-				<h4>Title of section 9</h4>
-				<div class="my-table">
-                    <div class="col-sm-3 events">
-                    event1
-                    </div>
-                    <div class="col-sm-3 events">
-                    event2
-                    </div>
-                    <div class="col-sm-3 events">
-                    event3
-                    </div>
-                    <div class="col-sm-3 events">
-                    event4
-                    </div>
-                </div>
-				<a href="#0" class="cd-read-more">Read more</a>
-			</div> <!-- cd-timeline-content -->
-		</div> <!-- cd-timeline-block -->
-        
-        <div class="cd-timeline-block">
-			<div class="cd-timeline-timeslot  ">
-				<p>6pm</p>
-			</div> <!-- cd-timeline-timeslot -->
-
-			<div class="cd-timeline-content">
-				<h4>Title of section 10</h4>
-				<div class="my-table">
-                    <div class="col-sm-3 events">
-                    event1
-                    </div>
-                    <div class="col-sm-3 events">
-                    event2
-                    </div>
-                    <div class="col-sm-3 events">
-                    event3
-                    </div>
-                    <div class="col-sm-3 events">
-                    event4
-                    </div>
-                </div>
-				<a href="#0" class="cd-read-more">Read more</a>
-			</div> <!-- cd-timeline-content -->
-		</div> <!-- cd-timeline-block -->
-        
-        
-        
+	<section id="cd-timeline" class="cd-container">   
 </section> <!-- cd-timeline -->
             </div>
         </div>
