@@ -11,6 +11,7 @@ var cats = {
     finance: true,
     quiz: true,
     exhibition: true,
+    DIY:true,
 }
 
 //-----------------------------------
@@ -78,13 +79,28 @@ function updateEvents(){
     evt = showEvents("1400","2 PM");
     evt = evt ? evt : ""
     html += evt;
-    evt = showEvents("1500","9 AM");
+    evt = showEvents("1500","3 PM");
     evt = evt ? evt : ""
     html += evt;
-    evt = showEvents("1600","9 AM");
+    evt = showEvents("1600","4 PM");
     evt = evt ? evt : ""
     html += evt;
-    evt = showEvents("1700","9 AM");
+    evt = showEvents("1700","5 PM");
+    evt = evt ? evt : ""
+    html += evt;
+    evt = showEvents("1800","6 PM");
+    evt = evt ? evt : ""
+    html += evt;
+    evt = showEvents("1900","7 PM");
+    evt = evt ? evt : ""
+    html += evt;
+    evt = showEvents("2000","8 PM");
+    evt = evt ? evt : ""
+    html += evt;
+    evt = showEvents("2100","9 PM");
+    evt = evt ? evt : ""
+    html += evt;
+    evt = showEvents("2200","10 PM");
     evt = evt ? evt : ""
     html += evt;
     html += "</div>";
@@ -97,25 +113,21 @@ function updateEvents(){
 
 function loadTestingEvents(day){
     if(day == '1'){
-        add("law day","0900","coding");
-        add("reverse coding","1100","coding");
-        add("pybits","0900","cat3");
-        add("botshot","0900","cat2");
-        add("taronish",Date.now(),"cat2");
-    }
-    if(day == '2'){
-        add("law follower","0900","coding");
-        add("reverse coding","0900","coding");
-        add("pybits","0900","cat3");
-        add("botshot","0900","cat2");
-        add("taronish",Date.now(),"cat2");
-    }
-    if(day == '3'){
-        add("law follower","0900","coding");
+        add("techtainment","0900","exhibition");
         add("reverse coding","1100","coding");
         add("pybits","0900","coding");
-        add("botshot","0900","cat2");
-        add("taronish",Date.now(),"cat2");
+    }
+    if(day == '2'){
+        add("robo wars","0900","mean");
+        add("quiz","1700","quiz");
+        add("pybits","0900","coding");
+        add("botshot","1500","robotics");
+    }
+    if(day == '3'){
+        add("robo wars","0900","mean");
+        add("open outcry","1100","finace");
+        add("pybits","0900","coding");
+        add("botshot","1500","robotics");
     }
 }
 
@@ -142,7 +154,7 @@ function toggleFilterButton(button){
     updateEvents();
 }
 
-function testCode(){
+/*function testCode(){
     var html = "<div class='cd-timeline-block'>";
     html += "<div class='cd-timeline-block'><div class='cd-timeline-timeslot'><p>9 AM</p></div><div class='cd-timeline-content'>";
     html += "<div class='eventsarray'>My event name</div>";
@@ -164,7 +176,7 @@ function testCode(){
     var holder = document.getElementById('cd-timeline');
     holder.innerHTML = html;
 }   
-
+*/
 
 //TODO fetchEvents on page load from some remote server.
 //TODO put all the event and category handlers in new object.
