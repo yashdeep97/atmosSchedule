@@ -143,22 +143,24 @@ function toggleFilterButton(button){
 }
 
 function testCode(){
-    var html = "<div class='cd-timeline-block'>";
+    var html = "";
     html += "<div class='cd-timeline-block'><div class='cd-timeline-timeslot'><p>9 AM</p></div><div class='cd-timeline-content'>";
     html += "<div class='eventsarray'>My event name</div>";
     html += "<div class='eventsarray'>My event name</div>";
     html += "<div class='eventsarray'>My event name</div>";
-    html += "</div>"
+    html += "</div>";
+    html += "</div>";
     html += "<div class='cd-timeline-block'><div class='cd-timeline-timeslot'><p>9 AM</p></div><div class='cd-timeline-content'>";
     html += "<div class='eventsarray'>My event name</div>";
     html += "<div class='eventsarray'>My event name</div>";
     html += "<div class='eventsarray'>My event name</div>";
-    html += "</div>"
+    html += "</div>";
+    html += "</div>";
     html += "<div class='cd-timeline-block'><div class='cd-timeline-timeslot'><p>9 AM</p></div><div class='cd-timeline-content'>";
     html += "<div class='eventsarray'>My event name</div>";
     html += "<div class='eventsarray'>My event name</div>";
     html += "<div class='eventsarray'>My event name</div>";
-    html += "</div>"
+    html += "</div>";
     html += "</div>";
     html += "</div>";
     var holder = document.getElementById('cd-timeline');
