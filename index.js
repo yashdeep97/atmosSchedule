@@ -134,8 +134,8 @@ function loadTestingEvents(day){
 function loadmystuff(){
     var day = document.getElementsByTagName('body')[0].getAttribute('data-day');
     loadTestingEvents(day);
-    //updateEvents();
-    testCode();
+    updateEvents();
+    //testCode();
 }
 
 //-----------------------------------

@@ -157,7 +157,7 @@ button{
 }
 
 #timeline{
-    background: url(images/background.jpg);
+   
 }
 
 .my-table{
@@ -174,4 +174,13 @@ button{
     background-color: beige;
     margin: 5px;
     border-radius: 10px;
+    color: black;
+    font-size: 1.2em;
+}
+
+.navbar{
+    background-color: rgba(150,150,255,0.5) !important;
+    color: black !important;
+    font-weight: 400;
+    font-size: 1.3em;
 }
